@@ -1,5 +1,5 @@
 package tools
-
+//Zhai Xing Jian
 func Reverse(s string) string {
 	l := []int(s)
 	n, h := len(s), len(s)/2
