@@ -2,7 +2,6 @@ package tools
 
 import (
 	"testing"
-	"fmt"
 )
 
 var ts = []struct {
@@ -17,7 +16,7 @@ var ts = []struct {
 func Test_rev(t *testing.T) {
 	for _, v := range ts {
 		if s := Reverse(v.in); s != v.out {
-			fmt.Printf("Reverse(%s)=%s;expect %s\n",
+			t.Errorf("Reverse(%s)=%s;expect %s\n",
 				v.in, s, v.out)
 		}
 	}
